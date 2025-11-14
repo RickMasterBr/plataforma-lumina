@@ -46,3 +46,13 @@
 
     box-shadow: 0 0 0 2px var(--color-interactive-accent-hover); /* Sombra roxa suave */
 }
+
+/* Estado de Erro */
+.inputBase.erro {
+    border-color: var(--color-feedback-error); /* Vermelho */
+}
+
+.inputBase.erro.focado {
+    border-color: var(--color-feedback-error);
+    box-shadow: 0 0 0 2px var(--color-feedback-error);
+}
