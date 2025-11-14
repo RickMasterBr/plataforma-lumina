@@ -1,0 +1,48 @@
+.inputBase {
+
+    /* Tipografia */
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-default);
+
+    /* Layout */
+    padding: 8px 12px;
+    border-radius: var(--border-radius-medium); /* 8px */
+    width: 320px; /* Largura fixa */
+
+    /* Cor e Borda */
+    background-color: var(--color-background-secondary);
+    border: 1px solid var(--color-border-default);
+
+    /* Comportamento */
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none; /* Remover outline padrão */
+}
+
+
+/* Estados */
+
+
+/* Cor do texto quando está em modo placeholder */
+.inputBase.placeholder {
+    color: var(--color-text-subtle);
+}
+
+
+/* Cor do texto quando o usuario digitou algo */
+.inputBase.digitado {
+    color: var(--color-text-default);
+}
+
+
+/* Estado de hover (padrão ou digitado) */
+.inputBase:hover {
+    border-color: var(--color-text-subtle);
+}
+
+/* Estado Focado */
+.inputBase.focado{
+    color: var(--color-text-default);
+    border-color: var(--color-interactive-accent); /* Roxo */
+
+    box-shadow: 0 0 0 2px var(--color-interactive-accent-hover); /* Sombra roxa suave */
+}
