@@ -1,0 +1,37 @@
+@import './_tokens.css';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-default);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-default);
+}
+
+
+/* Estilos de fonte reutilizáveis */
+
+.heading-1 {
+    font-size: var(--font-size-heading-1);
+    font-weight: var(--font-weight-bold);
+    line-height: 40px;
+}
+
+.heading-2 {
+    font-size: var(--font-size-heading-2);
+    font-weight: var(--font-weight-bold);
+    line-height: 36px;
+}
+
+
+/* tamanho de fontes */
+
+.body-default {
+    font-size: var(--font-size-body-default);
+    font-weight: var(--font-weight-regular);
+    line-height: 24px;
+}

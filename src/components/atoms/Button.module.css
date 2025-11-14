@@ -1,0 +1,43 @@
+/* Estilo base para todos os botões */
+
+.buttonBase {
+    /*Tipografia*/
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-default);
+    font-weight: var(--font-weight-regular);
+    line-height: 24px;
+    /*Layout*/
+    padding: 8px 16px;
+    border-radius: var(--border-radius-medium);
+    /*comportamento*/
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+
+/* Variante: Tipo = Primario */
+
+.primario {
+    background-color: var(--color-interactive-accent);
+    color: var(--color-text-default);
+    border-color: var(--color-interactive-accent);
+}
+
+.primario:hover {
+    background-color: var(--color-interactive-accent-hover);
+    border-color: var(--color-interactive-accent-hover);
+}
+
+
+/* Variante: Tipo = Secundario */
+
+.secundario {
+    background-color: transparent;
+    color: var(--color-text-default);
+    border-color: var(--color-border-default);
+}
+
+.secundario:hover {
+    border-color: var(--color-interactive-accent);
+}
