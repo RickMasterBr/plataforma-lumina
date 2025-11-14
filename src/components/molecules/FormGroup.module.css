@@ -1,0 +1,30 @@
+/* O container principal da molecula */
+.formGroupBase {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    text-align: left; /* Alinha o texto à esquerda */
+    gap: 8px; /* Espaçamento entre o Label e o Input (Verticalmente) */
+    width: 320px; /* Largura fixa para o grupo de formulário */
+}
+
+/* Estilo do Label */
+.label {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-small);
+    color: var(--color-text-default);
+    width: 100%; /* Ocupa toda a largura do container */
+}
+
+/* estilo do texto de ajuda */
+.helpText{
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-caption);
+    color: var(--color-text-subtle);
+    width: 100%;
+    margin-top: -4px; /* Espaçamento entre o Input e o HelpText menor que o label e Input*/
+}
+
+/* Variante de Erro para o Texto de Ajuda */
+.helpText.erro {
+    color: var(--color-feedback-error);
+  }

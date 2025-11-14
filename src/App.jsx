@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./components/atoms/Button";
 import Input from "./components/atoms/Input";
+import FormGroup from "./components/molecules/FormGroup";
 import "./styles/App.css";
 
 function App() {
@@ -16,6 +17,26 @@ function App() {
       <h3 style={{ marginTop: '24px'}}>Inputs</h3>
       <Input placeholder="Digite seu email..." type="email"></Input>
       <Input placeholder="Digite sua senha..." type="password"></Input>
+
+      <br></br>
+
+      {/* Estado Padrão */}
+      <FormGroup
+      label={"Email"}
+      helpText={"Texto de ajuda."}
+      type={"email"}
+      placeholder={"Digite seu email..."}
+      >
+      </FormGroup>
+
+      {/* Estado de Erro */}
+      <FormGroup 
+        label="Senha"
+        helpText="Mensagem de erro."
+        estado="erro" 
+        type="password"
+        placeholder="Digite sua senha..."
+      />
 
     </div>
   );
