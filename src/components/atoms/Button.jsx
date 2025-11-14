@@ -1,16 +1,17 @@
 import React from "react";
 import styles from "./Button.module.css"; //importando estilos
 
-function Button({ children, tipo = 'primario', onClick}){
+function Button({ children, tipo = 'primario', onClick }){
 
     // Define a classe CSS base e adiciona a classe do "tipo" (ex: 'primario')
+    // 1. A variável 'className' é definida aqui
     const className = `${styles.buttonBase} ${styles[tipo]}`;
 
     return (
-        <button className={classesDoBotao} onClick={onClick}>
+        // 2. O erro estava aqui: usava "classesDoBotao" em vez de "className"
+        <button className={className} onClick={onClick}>
             {children} 
         </button>
-
     );
 }
 
