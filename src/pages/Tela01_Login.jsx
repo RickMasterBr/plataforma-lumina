@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../components/atoms/Button";
 import FormGroup from "../components/molecules/FormGroup";
-import "./Tela01_Login.module.css";
+import styles from "./Tela01_Login.module.css";
 
 function Tela01_Login() {
     return (
