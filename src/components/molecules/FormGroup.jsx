@@ -7,10 +7,11 @@ Props:
 - label: O texto do rótulo (Rótulo).
 - helpText: O texto de ajuda abaixo do input.
 - estado: 'padrao' ou 'erro'.
+- fullWidth: definir se o FormGroup deve ocupar toda a largura disponível.
 - ...rest: Outras props (type, placeholder, etc.) são passadas para o Input.
 */
 
-function FormGroup({ label, helpText, estado = 'padrao', ...rest}) {
+function FormGroup({ label, helpText, estado = 'padrao', fullWidth = false, ...rest }) {
 
     // Define a classe do texto de ajuda (normal ou erro)
     const helpTextClass = `
@@ -18,8 +19,14 @@ function FormGroup({ label, helpText, estado = 'padrao', ...rest}) {
     ${estado === 'erro' ? styles.erro : ''}
     `;
 
-    return(
-        <div className={styles.formGroupBase}>
+    // Adiciona a classe 'fullWidth' ao container
+    const groupClass = `
+    ${styles.formGroupBase}
+    ${fullWidth ? styles.fullWidth : ''}
+    `;
+
+    return (
+        <div className={groupClass}>
             {/* 1. Rótulo Label */}
             {label && (
                 <label className={styles.label}>
@@ -29,8 +36,8 @@ function FormGroup({ label, helpText, estado = 'padrao', ...rest}) {
 
             {/* 2. O Átomo Input */}
             <Input
-            estado = {estado} //Passa o estado (erro)  para o input
-            {...rest} // Passa 'type', 
+                estado={estado} //Passa o estado (erro)  para o input
+                {...rest} // Passa 'type', 
             />
 
             {/* 3. O Texto de Ajuda */}

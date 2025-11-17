@@ -41,3 +41,8 @@
 .secundario:hover {
     border-color: var(--color-interactive-accent);
 }
+
+/* Estilo para Full Width */
+.fullWidth {
+    width: 100%;
+}

@@ -28,3 +28,14 @@
 .helpText.erro {
     color: var(--color-feedback-error);
   }
+
+
+  /* Estilo para largura total (Full Width) */
+.fullWidth {
+    width: 100%; /* O container do grupo terá 100% */
+  }
+  
+  /* E faz o Input dentro dele ter 100% também */
+  .fullWidth input {
+    width: 100%;
+  }
