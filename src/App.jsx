@@ -1,10 +1,10 @@
 import React from "react";
-import Tela02_Cadastro from "./pages/Tela02_Cadastro";
 import "./styles/global.css";
+import Tela03_Onboarding from "./pages/Tela03_Onboarding";
 
 function App() {
   return (
-      <Tela02_Cadastro />
+      <Tela03_Onboarding />
   );
 }
 

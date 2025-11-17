@@ -1,0 +1,48 @@
+.screenContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Fundo já é definido no global.css */
+  }
+  
+  .onboardingCard {
+    background-color: var(--color-background-secondary);
+    border-radius: var(--border-radius-large); /* 16px */
+    width: 500px; /* Um pouco mais largo que o login */
+    padding: 40px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .title {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-heading-2); /* 28px */
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-default);
+  }
+  
+  .subtitle {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-default);
+    color: var(--color-text-subtle);
+  }
+  
+  .optionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .footer {
+    margin-top: 16px;
+  }
