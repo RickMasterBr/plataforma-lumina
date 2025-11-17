@@ -1,10 +1,10 @@
 import React from "react";
-import Tela01_Login from "./pages/Tela01_Login";
+import Tela02_Cadastro from "./pages/Tela02_Cadastro";
 import "./styles/global.css";
 
 function App() {
   return (
-      <Tela01_Login />
+      <Tela02_Cadastro />
   );
 }
 
