@@ -1,0 +1,27 @@
+.cardBase {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-background-primary);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--border-radius-medium); /* 8px */
+
+    /* Tipografia */
+  color: var(--color-text-default);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-default);
+  text-align: left; /* Texto alinhado à esquerda */
+  
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cardBase:hover {
+  border-color: var(--color-interactive-accent); /* Roxo no hover */
+  background-color: var(--color-background-primary); /* Mantém o fundo escuro */
+}
+
+/* Estado selecionado */
+.selected {
+  border-color: var(--color-interactive-accent);
+  background-color: rgba(111, 66, 193, 0.1); /* Leve toque de roxo */
+}
