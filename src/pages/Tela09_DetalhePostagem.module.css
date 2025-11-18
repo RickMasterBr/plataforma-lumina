@@ -1,0 +1,27 @@
+.pageContainer {
+    min-height: 100vh;
+    background-color: var(--color-background-primary);
+  }
+  
+  .detailContainer {
+    display: flex;
+    justify-content: center; /* Centraliza a coluna de conteúdo */
+    width: 100%;
+    padding: 32px;
+  }
+  
+  .focoColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* Largura fixa para manter o foco, como especificado no plano de design */
+    width: 100%; 
+    max-width: 700px; 
+  }
+  
+  .commentsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaçamento entre os comentários principais */
+    padding-top: 8px;
+  }

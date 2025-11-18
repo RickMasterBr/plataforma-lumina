@@ -1,0 +1,57 @@
+.composerWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: var(--color-background-secondary);
+    border-radius: var(--border-radius-large);
+    border: 1px solid var(--color-border-default);
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-neutral-700); /* Cor neutra para o avatar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-default);
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .input {
+    /* Estilo básico de input, mas sem as bordas tradicionais */
+    flex: 1;
+    background-color: var(--color-background-primary);
+    border: 1px solid var(--color-border-default);
+    border-radius: 24px;
+    padding: 8px 16px;
+    color: var(--color-text-default);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-default);
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--color-text-subtle);
+  }
+  
+  .sendButton {
+    background: none;
+    border: none;
+    color: var(--color-interactive-accent);
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0;
+    height: 24px; /* Para SVG */
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sendButton:hover {
+    color: var(--color-interactive-accent-hover);
+  }

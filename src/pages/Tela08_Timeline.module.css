@@ -1,0 +1,139 @@
+
+.pageContainer {
+    min-height: 100vh;
+    background-color: var(--color-background-primary);
+  }
+  
+  .timelineGrid {
+    display: grid;
+    /* 3 Colunas: 250px | Flexível | 300px [cite: 1749-1752] */
+    grid-template-columns: 250px 1fr 300px;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    align-items: start;
+  }
+  
+  /* Estilos Comuns de Cards */
+  .miniProfileCard, .composerCard, .widgetCard {
+    background-color: var(--color-background-secondary);
+    border-radius: var(--border-radius-large);
+    border: 1px solid var(--color-border-default);
+    overflow: hidden;
+  }
+  
+  /* Coluna Esquerda (Mini Perfil) */
+  .miniProfileCard {
+    padding-bottom: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .coverBg {
+    height: 60px;
+    width: 100%;
+    background-color: var(--color-neutral-700);
+    margin-bottom: -25px; /* Sobreposição */
+  }
+  
+  .miniAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-interactive-accent);
+    border: 3px solid var(--color-background-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+  }
+  
+  .statsRow {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border-default);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+  }
+  
+  /* Coluna Central (Compositor) */
+  .feedColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .composerCard {
+    padding: 16px;
+  }
+  
+  .composerInputRow {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .smallAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-interactive-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .composerInput {
+    flex: 1;
+    background-color: var(--color-background-primary);
+    border: 1px solid var(--color-border-default);
+    border-radius: 24px;
+    padding: 0 16px;
+    color: var(--color-text-default);
+    outline: none;
+  }
+  
+  .composerActions {
+    display: flex;
+    gap: 16px;
+    padding-left: 52px; /* Alinha com o input */
+  }
+  
+  .mediaBtn {
+    background: none;
+    border: none;
+    color: var(--color-text-subtle);
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .mediaBtn:hover { color: var(--color-text-default); }
+  
+  /* Coluna Direita */
+  .widgetCard {
+    padding: 16px;
+  }
+  
+  .topicList {
+    list-style: none;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .topicList li {
+    color: var(--color-text-subtle);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .topicList li:hover { color: var(--color-interactive-accent); }

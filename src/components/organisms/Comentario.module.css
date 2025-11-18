@@ -1,0 +1,83 @@
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .mainContent {
+    display: flex;
+    align-items: flex-start; /* Alinha o texto ao topo do avatar */
+    gap: 12px;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px; /* Garante que o avatar não encolhe */
+    border-radius: 50%;
+    background-color: var(--color-interactive-accent); /* Avatar do comentarista em roxo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background-primary);
+    border-radius: var(--border-radius-medium);
+    padding: 12px;
+  }
+  
+  .authorName {
+    font-size: var(--font-size-body-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-default);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  
+  .text {
+    font-size: var(--font-size-body-small);
+    color: var(--color-text-default);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: var(--font-size-caption);
+  }
+  
+  .time {
+    color: var(--color-text-subtle);
+  }
+  
+  .actionBtn {
+    background: none;
+    border: none;
+    color: var(--color-text-subtle);
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .actionBtn:hover {
+    color: var(--color-interactive-accent);
+  }
+  
+  /* Área de aninhamento (Respostas) */
+  .repliesArea {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* Espaçamento para o aninhamento: Alinha o conteúdo da resposta abaixo do corpo do comentário */
+    padding-left: 52px; 
+    margin-top: 8px;
+  }
