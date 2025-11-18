@@ -1,0 +1,33 @@
+
+.tagBase {
+    /* Tipografia */
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-small);
+    color: var(--color-text-subtle); /* Texto cinza por padrão */
+    
+    /* Layout */
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--border-radius-large); /* 16px - formato pílula */
+    
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .tagBase:hover {
+    border-color: var(--color-interactive-accent);
+    color: var(--color-text-default);
+  }
+  
+  /* Estado Selecionado */
+  .selected {
+    background-color: var(--color-interactive-accent); /* Fundo roxo */
+    border-color: var(--color-interactive-accent);
+    color: var(--color-text-default); /* Texto branco */
+  }
+  
+  .selected:hover {
+    background-color: var(--color-interactive-accent-hover);
+    border-color: var(--color-interactive-accent-hover);
+  }

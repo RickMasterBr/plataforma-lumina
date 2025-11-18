@@ -1,0 +1,53 @@
+
+.screenContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .onboardingCard {
+    background-color: var(--color-background-secondary);
+    border-radius: var(--border-radius-large);
+    width: 500px;
+    padding: 40px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .title {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-heading-2);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-default);
+  }
+  
+  .subtitle {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-default);
+    color: var(--color-text-subtle);
+  }
+  
+  /* Estilo da Nuvem de Tags */
+  .tagCloud {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as tags "quebrem" linha */
+    gap: 12px;
+    justify-content: center;
+  }
+  
+  /* Rodapé com dois botões lado a lado */
+  .footerActions {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
