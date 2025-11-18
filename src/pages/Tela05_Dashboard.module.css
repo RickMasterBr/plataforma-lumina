@@ -1,0 +1,75 @@
+
+
+.pageContainer {
+    min-height: 100vh;
+    background-color: var(--color-background-primary);
+  }
+  
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 300px; /* Coluna principal flexível + Lateral fixa */
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+  
+  /* Coluna Principal */
+  .mainColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .welcomeHeader {
+    margin-bottom: 8px;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .placeholderCard {
+    height: 120px;
+    background-color: var(--color-background-secondary);
+    border: 1px dashed var(--color-border-default);
+    border-radius: var(--border-radius-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-subtle);
+  }
+  
+  /* Coluna Lateral */
+  .sideColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .widgetCard {
+    background-color: var(--color-background-secondary);
+    border-radius: var(--border-radius-large);
+    padding: 24px;
+  }
+  
+  /* Exemplo de scroll horizontal para cursos */
+  .horizontalScroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  
+  .miniCard {
+    min-width: 200px;
+    height: 120px;
+    background-color: var(--color-background-secondary);
+    border-radius: var(--border-radius-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-default);
+  }

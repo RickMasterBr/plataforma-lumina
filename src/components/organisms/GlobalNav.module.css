@@ -1,0 +1,85 @@
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 72px; /* Altura fixa */
+    padding: 0 32px;
+    
+    background-color: var(--color-background-secondary); /* Cinza um pouco mais claro */
+    border-bottom: 1px solid var(--color-border-default);
+    
+    /* Fixar no topo */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Logo */
+  .logoText {
+    font-family: var(--font-family-base);
+    font-size: 20px;
+    font-weight: 900; /* Extra Bold */
+    color: var(--color-text-default);
+    letter-spacing: 1px;
+  }
+  
+  /* Links Centrais */
+  .navLinks {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: var(--color-text-subtle);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-default);
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .link:hover {
+    color: var(--color-text-default);
+  }
+  
+  .link.active {
+    color: var(--color-interactive-accent); /* Roxo */
+    font-weight: 700;
+  }
+  
+  /* Ações Direita */
+  .userActions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .iconButton {
+    background: none;
+    border: none;
+    color: var(--color-text-subtle);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  
+  .iconButton:hover {
+    color: var(--color-text-default);
+  }
+  
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-interactive-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
