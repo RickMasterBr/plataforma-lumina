@@ -8,9 +8,10 @@ import Tela13_MarketplaceProjetos from "./pages/Tela13_MarketplaceProjetos";
 import Tela14_DetalhesProjeto from "./pages/Tela14_DetalhesProjeto";
 import Tela15_GerenciamentoProjeto from "./pages/Tela15_GerenciamentoProjeto";
 import Tela16_PodcastPrincipal from "./pages/Tela16_PodcastPrincipal";
+import Tela17_DetalheEpisodio from "./pages/Tela17_DetalheEpisodio";
 
 function App() {
-  return <Tela16_PodcastPrincipal/>;
+  return <Tela17_DetalheEpisodio />;
 }
 
 export default App;

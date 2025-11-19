@@ -1,0 +1,64 @@
+.playerContainer {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-large);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid var(--color-border-default);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.playBtn {
+  background: none;
+  border: none;
+  color: var(--color-interactive-accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.playBtn:hover {
+  transform: scale(1.1);
+  color: var(--color-interactive-accent-hover);
+}
+
+.progressBar {
+  flex: 1;
+  height: 6px;
+  background-color: var(--color-neutral-700);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--color-interactive-accent);
+  border-radius: 4px;
+}
+
+.scrubber {
+  position: absolute;
+  top: 50%;
+  left: 35%; /* Deve bater com a width do fill */
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-text-default);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.time {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-caption);
+  color: var(--color-text-subtle);
+  font-variant-numeric: tabular-nums; /* Mantém os números alinhados */
+}
+
+.action {
+  flex-shrink: 0;
+}
