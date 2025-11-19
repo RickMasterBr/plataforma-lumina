@@ -39,7 +39,7 @@ const cursos = [
   {
     id: 6,
     titulo: "Copywriting Persuasivo",
-    instrutor: "Paulo Kogos",
+    instrutor: "Kant",
     progresso: 0,
   },
 ];
