@@ -7,9 +7,10 @@ import Tela12_PlayerCurso from "./pages/Tela12_PlayerCurso";
 import Tela13_MarketplaceProjetos from "./pages/Tela13_MarketplaceProjetos";
 import Tela14_DetalhesProjeto from "./pages/Tela14_DetalhesProjeto";
 import Tela15_GerenciamentoProjeto from "./pages/Tela15_GerenciamentoProjeto";
+import Tela16_PodcastPrincipal from "./pages/Tela16_PodcastPrincipal";
 
 function App() {
-  return <Tela15_GerenciamentoProjeto />;
+  return <Tela16_PodcastPrincipal/>;
 }
 
 export default App;

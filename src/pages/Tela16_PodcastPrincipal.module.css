@@ -1,0 +1,68 @@
+.pageContainer {
+    min-height: 100vh;
+    background-color: var(--color-background-primary);
+}
+
+.contentContainer {
+    max-width: 800px; /* Layout focado em leitura/mídia, mais estreito que o dashboard */
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* Header */
+.podcastHeader {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--color-border-default);
+}
+
+.coverArt {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--color-interactive-accent), #2b2b2b);
+    border-radius: var(--border-radius-large);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.coverText {
+    color: white;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.headerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.platforms {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.platformTag {
+    font-size: 12px;
+    color: var(--color-text-subtle);
+    border: 1px solid var(--color-border-default);
+    padding: 4px 12px;
+    border-radius: 100px;
+}
+
+/* Lista de Episódios */
+.episodesList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
