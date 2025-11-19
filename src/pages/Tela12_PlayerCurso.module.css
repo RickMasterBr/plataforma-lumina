@@ -1,0 +1,241 @@
+.pageContainer {
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+}
+
+.playerGrid {
+  display: grid;
+  /* Conteúdo Principal Flexível | Sidebar Fixa 350px */
+  grid-template-columns: 1fr 350px;
+  min-height: calc(100vh - 72px); /* Altura total menos o header */
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.mainContent {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto; /* Permite rolar o conteúdo se for longo */
+}
+
+/* Player de Vídeo */
+.videoPlayer {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Formato Widescreen */
+  background-color: #000; /* Fundo preto para vídeo */
+  border-radius: var(--border-radius-large);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.playButton {
+  font-size: 48px;
+  color: white;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.playButton:hover {
+  opacity: 1;
+}
+
+.videoControls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  font-size: 12px;
+  border-radius: 0 0 16px 16px;
+}
+
+.fakeScrubber {
+  flex: 1;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  position: relative;
+}
+.fakeScrubber::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20%; /* Progresso fake */
+  background-color: var(--color-interactive-accent);
+}
+
+/* Cabeçalho da Aula */
+.lessonHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-default);
+  padding-bottom: 16px;
+}
+
+.lessonActions {
+  display: flex;
+  gap: 12px;
+}
+
+.actionBtn {
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border-default);
+  color: var(--color-text-default);
+  padding: 8px 16px;
+  border-radius: var(--border-radius-medium);
+  cursor: pointer;
+  font-family: var(--font-family-base);
+}
+.actionBtn:hover {
+  border-color: var(--color-interactive-accent);
+}
+
+/* Painel de Abas */
+.contextPanel {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-large);
+  padding: 24px;
+  flex: 1; /* Ocupa o resto do espaço vertical se houver */
+}
+
+.tabsHeader {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid var(--color-border-default);
+  margin-bottom: 16px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  color: var(--color-text-subtle);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  color: var(--color-interactive-accent);
+  border-bottom-color: var(--color-interactive-accent);
+}
+
+.notesInput {
+  width: 100%;
+  height: 100px;
+  background-color: var(--color-background-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--border-radius-medium);
+  padding: 12px;
+  color: var(--color-text-default);
+  font-family: var(--font-family-base);
+  resize: vertical;
+}
+
+.resourceList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-interactive-accent);
+  cursor: pointer;
+}
+
+/* --- SIDEBAR DIREITA --- */
+.courseSidebar {
+  background-color: var(--color-background-secondary);
+  border-left: 1px solid var(--color-border-default);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 72px);
+}
+
+.sidebarHeader {
+  padding: 24px;
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.progressContainer {
+  margin-top: 12px;
+}
+.progressLabel {
+  font-size: 12px;
+  color: var(--color-text-subtle);
+  margin-bottom: 4px;
+}
+
+.moduleList {
+  overflow-y: auto;
+  flex: 1;
+  padding: 16px 0;
+}
+
+.moduleSection {
+  margin-bottom: 16px;
+}
+
+.moduleTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-default);
+  padding: 8px 24px;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.lessonList {
+  list-style: none;
+}
+
+.lessonItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-text-subtle);
+  transition: background 0.2s;
+}
+
+.lessonItem:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.activeLesson {
+  background-color: rgba(111, 66, 193, 0.1); /* Roxo transparente */
+  color: var(--color-text-default);
+  font-weight: 600;
+  border-left: 3px solid var(--color-interactive-accent);
+}
+
+.checkIcon {
+  color: var(--color-feedback-success);
+}
+.playIcon {
+  color: var(--color-interactive-accent);
+}
+.lockIcon {
+  color: var(--color-text-subtle);
+  opacity: 0.5;
+}
+
+.lessonTime {
+  margin-left: auto; /* Empurra para a direita */
+  font-size: 12px;
+  opacity: 0.7;
+}
