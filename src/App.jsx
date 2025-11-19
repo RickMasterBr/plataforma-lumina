@@ -4,9 +4,10 @@ import Tela09_DetalhePostagem from "./pages/Tela09_DetalhePostagem";
 import Tela10_CatalogoCursos from "./pages/Tela10_CatalogoCursos";
 import Tela11_DetalhesCurso from "./pages/Tela11_DetalhesCurso";
 import Tela12_PlayerCurso from "./pages/Tela12_PlayerCurso";
+import Tela13_MarketplaceProjetos from "./pages/Tela13_MarketplaceProjetos";
 
 function App() {
-  return <Tela12_PlayerCurso />;
+  return <Tela13_MarketplaceProjetos />;
 }
 
 export default App;
