@@ -1,0 +1,140 @@
+/* Reutilizando estrutura do Admin */
+.adminContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--color-background-secondary);
+  border-right: 1px solid var(--color-border-default);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.logo {
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-text-default);
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 12px;
+  border-radius: var(--border-radius-medium);
+  color: var(--color-text-subtle);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-default);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.navItem:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-default);
+}
+
+.active {
+  background-color: rgba(111, 66, 193, 0.1);
+  color: var(--color-interactive-accent);
+  font-weight: 700;
+}
+
+.contentArea {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  padding-bottom: 16px;
+}
+
+/* --- ESPECÍFICO DA TELA 19 --- */
+
+.controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.tableCard {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-medium);
+  border: 1px solid var(--color-border-default);
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHeader {
+  display: flex;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-border-default);
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-body-small);
+}
+
+.tableRow {
+  display: flex;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-border-default);
+  align-items: center;
+  color: var(--color-text-default);
+  font-size: var(--font-size-body-small);
+  transition: background-color 0.2s;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+.tableRow:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Colunas */
+.colName {
+  flex: 2;
+}
+.colEmail {
+  flex: 3;
+  color: var(--color-text-subtle);
+}
+.colRole {
+  flex: 1;
+}
+.colActions {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.iconBtn:hover {
+  opacity: 1;
+}

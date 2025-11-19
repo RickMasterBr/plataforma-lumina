@@ -10,9 +10,11 @@ import Tela15_GerenciamentoProjeto from "./pages/Tela15_GerenciamentoProjeto";
 import Tela16_PodcastPrincipal from "./pages/Tela16_PodcastPrincipal";
 import Tela17_DetalheEpisodio from "./pages/Tela17_DetalheEpisodio";
 import Tela18_AdminDashboard from "./pages/Tela18_AdminDashboard";
+import Tela19_GerenciamentoUsuarios from "./pages/Tela19_GerenciamentoUsuarios";
+import Tela20_FilaModeracao from "./pages/Tela20_FilaModeracao";
 
 function App() {
-  return <Tela18_AdminDashboard />;
+  return <Tela20_FilaModeracao />;
 }
 
 export default App;

@@ -1,0 +1,41 @@
+.card {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-medium);
+  padding: 24px;
+  border: 1px solid var(--color-border-default);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--font-size-body-small);
+  color: var(--color-text-default);
+}
+
+.tagMotivo {
+  color: var(--color-feedback-error);
+  font-weight: bold;
+}
+
+.preview {
+  background-color: var(--color-background-primary);
+  border-radius: 4px;
+  padding: 12px;
+  border-left: 4px solid var(--color-border-default);
+}
+
+.previewText {
+  font-style: italic;
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-body-small);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 8px;
+}
