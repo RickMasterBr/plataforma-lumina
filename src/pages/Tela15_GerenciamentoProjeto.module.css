@@ -1,0 +1,128 @@
+.pageContainer {
+    min-height: 100vh;
+    background-color: var(--color-background-primary);
+  }
+  
+  .managementContainer {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 72px); /* Ocupa o resto da tela */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px;
+    gap: 24px;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .headerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .inviteBtn {
+    background: transparent;
+    border: 1px solid var(--color-interactive-accent);
+    color: var(--color-interactive-accent);
+    padding: 8px 16px;
+    border-radius: var(--border-radius-medium);
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  /* Abas */
+  .tabs {
+    display: flex;
+    gap: 24px;
+    border-bottom: 1px solid var(--color-border-default);
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    padding-bottom: 12px;
+    color: var(--color-text-subtle);
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .activeTab {
+    color: var(--color-text-default);
+    border-bottom-color: var(--color-interactive-accent);
+    font-weight: 700;
+  }
+  
+  /* Quadro Kanban */
+  .kanbanBoard {
+    display: flex;
+    gap: 24px;
+    flex: 1; /* Ocupa o espaço vertical restante */
+    overflow-x: auto; /* Permite rolagem horizontal se muitas colunas */
+    padding-bottom: 16px;
+  }
+  
+  .column {
+    background-color: var(--color-background-secondary);
+    border-radius: var(--border-radius-large); /* 16px */
+    min-width: 300px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .columnHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-border-default);
+  }
+  
+  .columnTitle {
+    font-weight: 700;
+    color: var(--color-text-default);
+  }
+  
+  .countBadge {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-subtle);
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+  
+  .taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    overflow-y: auto; /* Permite rolagem vertical dentro da coluna */
+  }
+  
+  .addTaskBtn {
+    background: transparent;
+    border: 1px dashed var(--color-text-subtle);
+    color: var(--color-text-subtle);
+    padding: 8px;
+    border-radius: var(--border-radius-medium);
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .addTaskBtn:hover {
+    border-color: var(--color-interactive-accent);
+    color: var(--color-interactive-accent);
+  }

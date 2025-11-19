@@ -6,9 +6,10 @@ import Tela11_DetalhesCurso from "./pages/Tela11_DetalhesCurso";
 import Tela12_PlayerCurso from "./pages/Tela12_PlayerCurso";
 import Tela13_MarketplaceProjetos from "./pages/Tela13_MarketplaceProjetos";
 import Tela14_DetalhesProjeto from "./pages/Tela14_DetalhesProjeto";
+import Tela15_GerenciamentoProjeto from "./pages/Tela15_GerenciamentoProjeto";
 
 function App() {
-  return <Tela14_DetalhesProjeto />;
+  return <Tela15_GerenciamentoProjeto />;
 }
 
 export default App;
