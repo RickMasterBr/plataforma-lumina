@@ -1,0 +1,23 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 8px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.02
+  ); /* Fundo sutil para a área da lista */
+  border-radius: var(--border-radius-medium);
+}
+
+.emptyState {
+  padding: 24px;
+  text-align: center;
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-body-small);
+  border: 1px dashed var(--color-border-default);
+  border-radius: var(--border-radius-medium);
+}

@@ -1,0 +1,35 @@
+.item {
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border-default); /* Adicionado para melhor definição */
+  border-radius: var(--border-radius-medium); /* 8px */
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: grab; /* Cursor de mãozinha aberta */
+  transition: background-color 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+.item:hover {
+  border-color: var(--color-interactive-accent); /* Roxo ao passar o mouse */
+  transform: translateY(-1px);
+}
+
+.item:active {
+  cursor: grabbing; /* Cursor de mãozinha fechada ao clicar */
+}
+
+.handle {
+  color: var(--color-text-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-default);
+  color: var(--color-text-default);
+  flex: 1; /* Ocupa o espaço restante */
+}
