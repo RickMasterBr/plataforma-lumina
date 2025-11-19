@@ -1,0 +1,45 @@
+/* Base do Badge (Círculo) */
+.badgeBase {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-background-secondary); /* neutral-800 */
+  border: 2px solid var(--color-border-default); /* neutral-700 */
+  color: var(--color-text-subtle); /* Cor do ícone padrão */
+
+  transition: all 0.3s ease;
+}
+
+/* --- VARIANTES DE NÍVEL --- */
+
+/* Bloqueado (Padrão) */
+.bloqueado {
+  /* Usa as cores base definidas acima */
+  opacity: 0.6;
+}
+
+/* Bronze (Nível 1) */
+.bronze {
+  border-color: var(--color-interactive-accent); /* Roxo */
+  color: var(--color-interactive-accent);
+  background-color: rgba(111, 66, 193, 0.1); /* Roxo bem clarinho no fundo */
+}
+
+/* Prata (Nível 2) */
+.prata {
+  border-color: var(--color-feedback-success); /* Verde-azulado (Teal) */
+  color: var(--color-feedback-success);
+  background-color: rgba(0, 191, 165, 0.1);
+}
+
+/* Ouro (Nível 3 - Opcional) */
+.ouro {
+  border-color: #ffd700; /* Dourado (Hardcoded ou adicione ao tokens se preferir) */
+  color: #ffd700;
+  background-color: rgba(255, 215, 0, 0.1);
+}

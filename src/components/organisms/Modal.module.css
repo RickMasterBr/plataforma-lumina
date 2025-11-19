@@ -1,0 +1,58 @@
+/* O Fundo Escuro (Overlay) [cite: 8956] */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    26,
+    26,
+    26,
+    0.8
+  ); /* neutral-900 com 80% opacidade [cite: 8958] */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Garante que fique acima de tudo */
+}
+
+/* O Card Flutuante [cite: 8911] */
+.card {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-large); /* 16px */
+  width: 440px; /* Largura fixa [cite: 8912] */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Tipografia */
+.title {
+  font-family: var(--font-family-base);
+  font-size: 20px; /* Heading 4 aproximado */
+  font-weight: 700;
+  color: var(--color-text-default);
+  margin: 0;
+}
+
+.textError {
+  color: var(--color-feedback-error);
+}
+
+.content {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-default);
+  color: var(--color-text-subtle);
+  line-height: 1.5;
+}
+
+/* Botões alinhados à direita [cite: 8942] */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}

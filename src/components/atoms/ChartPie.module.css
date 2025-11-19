@@ -1,0 +1,62 @@
+.card {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-medium);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza tudo */
+  gap: 16px;
+  width: 200px; /* Largura fixa */
+  border: 1px solid var(--color-border-default);
+}
+
+.title {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-small);
+  color: var(--color-text-subtle);
+  font-weight: 400;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.donutContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.donutChart {
+  transform: rotate(0deg); /* Pode ajustar a rotação inicial aqui se precisar */
+}
+
+.centerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  color: var(--color-text-default);
+}
+
+.legend {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--color-text-subtle);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

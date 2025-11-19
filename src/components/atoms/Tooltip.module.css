@@ -1,0 +1,48 @@
+.tooltipContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Largura fixa recomendada no documento [cite: 173] */
+  width: 240px;
+  /* Sombra para dar destaque (ele flutua sobre a interface) */
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.box {
+  background-color: var(--color-background-secondary); /* [cite: 164] */
+  border-radius: var(--border-radius-medium); /* 8px [cite: 165] */
+  padding: 8px 12px; /* [cite: 166] */
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-small); /* [cite: 169] */
+  color: var(--color-text-default); /* [cite: 170] */
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- SETAS --- */
+
+/* Seta apontando para CIMA (usada quando o tooltip está ABAIXO do elemento) */
+.arrowUp {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; /* Metade da largura (10px) */
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid var(--color-background-secondary); /* Altura 8px e cor do fundo */
+  /* Remove espaçamento extra */
+  display: block;
+}
+
+/* Seta apontando para BAIXO (usada quando o tooltip está ACIMA do elemento) */
+.arrowDown {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid var(--color-background-secondary);
+  display: block;
+}

@@ -1,0 +1,21 @@
+.spinner {
+  /* Definições de tamanho baseadas no documento (24x24) [cite: 8870] */
+  width: 24px;
+  height: 24px;
+
+  /* Criação do arco com borda */
+  border: 3px solid rgba(111, 66, 193, 0.2); /* Fundo do arco mais claro */
+  border-top-color: var(
+    --color-interactive-accent
+  ); /* Cor principal (Roxo) [cite: 8875] */
+  border-radius: 50%; /* Formato circular */
+
+  /* Animação de rotação */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
