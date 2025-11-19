@@ -1,0 +1,77 @@
+.adminContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  width: 250px;
+  background-color: var(--color-background-secondary);
+  border-right: 1px solid var(--color-border-default);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.logo {
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-text-default);
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 12px;
+  border-radius: var(--border-radius-medium);
+  color: var(--color-text-subtle);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-default);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navItem:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-default);
+}
+
+.active {
+  background-color: rgba(111, 66, 193, 0.1); /* Roxo translúcido */
+  color: var(--color-interactive-accent);
+  font-weight: 700;
+}
+
+/* --- CONTEÚDO --- */
+.contentArea {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.widgetsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

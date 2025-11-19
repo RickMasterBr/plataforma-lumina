@@ -1,0 +1,29 @@
+.card {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-medium); /* 8px */
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--color-border-default);
+  min-width: 200px;
+  flex: 1;
+}
+
+.title {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-small);
+  color: var(--color-text-subtle);
+}
+
+.value {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-heading-3); /* 24px */
+  font-weight: 700;
+  color: var(--color-text-default);
+}
+
+/* Variação de Alerta (Vermelho) para moderação */
+.alert {
+  color: var(--color-feedback-error);
+}
