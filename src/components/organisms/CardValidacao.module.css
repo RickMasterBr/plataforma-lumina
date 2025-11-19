@@ -1,0 +1,98 @@
+.card {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-large); /* 16px */
+  padding: 24px;
+  border: 1px solid var(--color-border-default);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%; /* Ocupa a largura do container pai */
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.projectTitle {
+  font-family: var(--font-family-base);
+  font-size: 18px; /* Heading 5 */
+  font-weight: 700;
+  color: var(--color-text-default);
+  margin: 0;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.labelLink {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-body-default);
+}
+
+.link {
+  color: var(--color-interactive-accent);
+  text-decoration: underline;
+  font-size: var(--font-size-body-default);
+  word-break: break-all;
+}
+
+/* Área de Feedback (Pendente) */
+.feedbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedbackTitle {
+  font-family: var(--font-family-base);
+  font-size: 16px; /* Heading 6 */
+  font-weight: 700;
+  color: var(--color-text-default);
+  margin: 0;
+}
+
+/* Ajuste específico para o Input dentro do FormGroup para parecer um textarea */
+.feedbackForm input {
+  height: 100px !important; /* Força altura maior */
+  vertical-align: top;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+/* Estado Aprovado */
+.successState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  background-color: rgba(0, 191, 165, 0.1); /* Fundo verde claro */
+  border-radius: var(--border-radius-medium);
+  border: 1px solid var(--color-feedback-success);
+}
+
+.successIcon {
+  color: var(--color-feedback-success);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.successText {
+  color: var(--color-feedback-success);
+  font-weight: 700;
+  font-size: 18px;
+}
