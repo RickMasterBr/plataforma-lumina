@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none; /* Evita seleção de texto ao clicar rápido */
+}
+
+/* Esconde o input nativo */
+.input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* A caixa visual */
+.box {
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-background-secondary);
+    border: 2px solid var(--color-border-default);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: white; /* Cor do ícone check */
+}
+
+/* Estado Hover na caixa */
+.container:hover .input ~ .box {
+    border-color: var(--color-interactive-accent);
+}
+
+/* Estado Marcado (Checked) */
+.checked {
+    background-color: var(--color-interactive-accent);
+    border-color: var(--color-interactive-accent);
+}
+
+/* Texto */
+.label {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-default);
+    color: var(--color-text-default);
+}

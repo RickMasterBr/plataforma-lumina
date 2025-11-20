@@ -21,9 +21,10 @@ import Tela26_GerenciamentoTrilhas from "./pages/Tela26_GerenciamentoTrilhas";
 import Tela27_GerenciamentoConteudo from "./pages/Tela27_GerenciamentoConteudo";
 import Tela28_RelatoriosImpacto from "./pages/Tela28_RelatoriosImpacto";
 import Tela29_MetricasBrandEquity from "./pages/Tela29_MetricasBrandEquity";
+import Tela30_ExportacaoRelatorios from "./pages/Tela30_ExportacaoRelatorios";
 
 function App() {
-  return <Tela29_MetricasBrandEquity />;
+  return <Tela30_ExportacaoRelatorios />;
 }
 
 export default App;
