@@ -22,9 +22,11 @@ import Tela27_GerenciamentoConteudo from "./pages/Tela27_GerenciamentoConteudo";
 import Tela28_RelatoriosImpacto from "./pages/Tela28_RelatoriosImpacto";
 import Tela29_MetricasBrandEquity from "./pages/Tela29_MetricasBrandEquity";
 import Tela30_ExportacaoRelatorios from "./pages/Tela30_ExportacaoRelatorios";
+import TelaGeral01_Loading from "./pages/TelaGeral01_Loading";
+import TelaGeral02_Erro404 from "./pages/TelaGeral02_Erro404";
 
 function App() {
-  return <Tela30_ExportacaoRelatorios />;
+  return <TelaGeral02_Erro404 />;
 }
 
 export default App;
