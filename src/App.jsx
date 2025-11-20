@@ -17,9 +17,13 @@ import Tela22_MeuProgresso from "./pages/Tela22_MeuProgresso";
 import Tela23_ComunidadeMentoria from "./pages/Tela23_ComunidadeMentoria";
 import Tela24_EventosWebinars from "./pages/Tela24_EventosWebinars";
 import Tela25_ValidacaoPrototipos from "./pages/Tela25_ValidacaoPrototipos";
+import Tela26_GerenciamentoTrilhas from "./pages/Tela26_GerenciamentoTrilhas";
+import Tela27_GerenciamentoConteudo from "./pages/Tela27_GerenciamentoConteudo";
+import Tela28_RelatoriosImpacto from "./pages/Tela28_RelatoriosImpacto";
+import Tela29_MetricasBrandEquity from "./pages/Tela29_MetricasBrandEquity";
 
 function App() {
-  return <Tela25_ValidacaoPrototipos />;
+  return <Tela29_MetricasBrandEquity />;
 }
 
 export default App;
