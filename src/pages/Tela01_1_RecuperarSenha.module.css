@@ -1,0 +1,51 @@
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-background-primary);
+}
+
+.card {
+    background-color: var(--color-background-secondary);
+    border-radius: var(--border-radius-large);
+    width: 400px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+}
+
+.logo {
+    font-family: var(--font-family-base);
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--color-text-default);
+}
+
+.title {
+    font-family: var(--font-family-base);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-default);
+}
+
+.description {
+    font-family: var(--font-family-base);
+    font-size: 14px;
+    color: var(--color-text-subtle);
+    line-height: 1.5;
+}
+
+.backLink {
+    color: var(--color-text-subtle);
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.backLink:hover {
+    color: var(--color-interactive-accent);
+    text-decoration: underline;
+}

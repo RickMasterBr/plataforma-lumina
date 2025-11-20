@@ -1,0 +1,29 @@
+.pageContainer {
+    min-height: 100vh;
+    background-color: var(--color-background-primary);
+}
+
+.documentContainer {
+    max-width: 800px; /* Largura de leitura ideal */
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.textContent {
+    color: var(--color-text-default);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-default);
+    line-height: 1.8; /* Altura de linha maior para leitura */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.textContent h3 {
+    margin-top: 24px;
+    color: var(--color-text-default);
+}
+
+.textContent p {
+    color: var(--color-text-subtle); /* Texto corrido levemente mais claro */
+}
