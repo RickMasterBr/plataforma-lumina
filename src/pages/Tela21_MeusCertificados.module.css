@@ -1,0 +1,21 @@
+.pageContainer {
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+}
+
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px;
+  gap: 24px;
+}
+
+.certificatesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  /* Alinha à esquerda */
+  justify-content: flex-start;
+}

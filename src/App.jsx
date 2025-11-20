@@ -12,9 +12,10 @@ import Tela17_DetalheEpisodio from "./pages/Tela17_DetalheEpisodio";
 import Tela18_AdminDashboard from "./pages/Tela18_AdminDashboard";
 import Tela19_GerenciamentoUsuarios from "./pages/Tela19_GerenciamentoUsuarios";
 import Tela20_FilaModeracao from "./pages/Tela20_FilaModeracao";
+import Tela21_MeusCertificados from "./pages/Tela21_MeusCertificados";
 
 function App() {
-  return <Tela20_FilaModeracao />;
+  return <Tela21_MeusCertificados />;
 }
 
 export default App;
