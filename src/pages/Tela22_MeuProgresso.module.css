@@ -1,0 +1,45 @@
+.pageContainer {
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+}
+
+.progressContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  gap: 40px;
+}
+
+/* Widgets */
+.widgetsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Gráficos */
+.chartsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Badges */
+.badgesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.badgesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: var(--color-background-secondary);
+  padding: 24px;
+  border-radius: var(--border-radius-large);
+  border: 1px solid var(--color-border-default);
+}
