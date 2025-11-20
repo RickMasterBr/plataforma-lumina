@@ -16,9 +16,10 @@ import Tela21_MeusCertificados from "./pages/Tela21_MeusCertificados";
 import Tela22_MeuProgresso from "./pages/Tela22_MeuProgresso";
 import Tela23_ComunidadeMentoria from "./pages/Tela23_ComunidadeMentoria";
 import Tela24_EventosWebinars from "./pages/Tela24_EventosWebinars";
+import Tela25_ValidacaoPrototipos from "./pages/Tela25_ValidacaoPrototipos";
 
 function App() {
-  return <Tela24_EventosWebinars />;
+  return <Tela25_ValidacaoPrototipos />;
 }
 
 export default App;
