@@ -24,9 +24,12 @@ import Tela29_MetricasBrandEquity from "./pages/Tela29_MetricasBrandEquity";
 import Tela30_ExportacaoRelatorios from "./pages/Tela30_ExportacaoRelatorios";
 import TelaGeral01_Loading from "./pages/TelaGeral01_Loading";
 import TelaGeral02_Erro404 from "./pages/TelaGeral02_Erro404";
+import Tela05_1_TourContextual from "./pages/Tela05_1_TourContextual";
+import Tela11_1_ModalConfirmacao from "./pages/Tela11_1_ModalConfirmacao";
+import Tela15_3_ModalEnvio from "./pages/Tela15_3_ModalEnvio";
 
 function App() {
-  return <TelaGeral02_Erro404 />;
+  return <Tela15_3_ModalEnvio />;
 }
 
 export default App;

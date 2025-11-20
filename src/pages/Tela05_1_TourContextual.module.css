@@ -1,0 +1,61 @@
+.container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* A tela original fica no fundo */
+.baseScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* O Overlay cobre tudo */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.8); /* neutral-900 com 80% */
+    z-index: 100; /* Fica bem acima */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Simula a área de destaque na tela */
+.highlightArea {
+    /* Posição absoluta para "acertar" onde ficaria o elemento na tela de baixo */
+    position: absolute;
+    top: 280px; /* Ajuste conforme necessário para cair sobre "Meus Cursos" */
+    left: 50px; /* Ajuste visual */
+    
+    /* Borda brilhante para destacar o foco */
+    border: 2px solid var(--color-interactive-accent);
+    border-radius: 8px;
+    width: 800px;
+    height: 200px;
+    
+    /* O box-shadow ajuda a criar o efeito de "furo" visualmente */
+    box-shadow: 0 0 0 9999px rgba(26, 26, 26, 0.8);
+}
+
+.tooltipWrapper {
+    position: absolute;
+    top: -100px; /* Posiciona o tooltip acima da área de destaque */
+    left: 20px;
+}
+
+.tourControls {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    gap: 16px;
+    z-index: 101;
+}

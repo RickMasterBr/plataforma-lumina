@@ -1,0 +1,12 @@
+.container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Garante que a tela de fundo fique "trancada" visualmente se necessário */
+.backgroundWrapper {
+    width: 100%;
+    height: 100%;
+    /* Opcional: Adicionar um filtro de desfoque se quiser enfatizar o modal */
+    /* filter: blur(2px); */
+}
