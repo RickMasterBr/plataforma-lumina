@@ -1,43 +1,69 @@
 import React from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom"; // Importações do Router
 import SearchBar from "../molecules/SearchBar";
 import styles from "./GlobalNav.module.css";
 
-/*
-Props:
-- simplificado: Se true, esconde a navegação e a busca (apenas Logo e Avatar).
-*/
 function GlobalNav({ simplificado = false }) {
+  const location = useLocation(); // Hook para saber a rota atual
+  const navigate = useNavigate();
+
+  // Função auxiliar para adicionar classe 'active' se a rota coincidir
+  const isActive = (path) =>
+    location.pathname.includes(path) ? styles.active : "";
+
+  // Simulação de busca (ao pressionar enter ou algo assim)
+  const handleSearch = () => {
+    navigate("/busca");
+  };
+
   return (
     <header className={styles.navContainer}>
-      {/* 1. Logo */}
+      {/* 1. Logo (Clica e volta para o Dashboard) */}
       <div className={styles.logoSection}>
-        <h2 className={styles.logoText}>LÚMINA</h2>
+        <Link to="/dashboard" style={{ textDecoration: "none" }}>
+          <h2 className={styles.logoText}>LÚMINA</h2>
+        </Link>
       </div>
 
-      {/* 2. Links de Navegação (Escondidos se simplificado for true) */}
+      {/* 2. Links de Navegação */}
       {!simplificado && (
         <nav className={styles.navLinks}>
-          <a href="#" className={`${styles.link} ${styles.active}`}>
+          <Link
+            to="/timeline"
+            className={`${styles.link} ${isActive("/timeline")}`}
+          >
             Timeline
-          </a>
-          <a href="#" className={styles.link}>
+          </Link>
+          <Link
+            to="/courses"
+            className={`${styles.link} ${isActive("/courses")}`}
+          >
             Cursos
-          </a>
-          <a href="#" className={styles.link}>
+          </Link>
+          <Link
+            to="/projects"
+            className={`${styles.link} ${isActive("/projects")}`}
+          >
             Projetos
-          </a>
-          <a href="#" className={styles.link}>
+          </Link>
+          <Link
+            to="/podcast"
+            className={`${styles.link} ${isActive("/podcast")}`}
+          >
             Podcast
-          </a>
+          </Link>
         </nav>
       )}
 
       {/* 3. Ações do Usuário */}
       <div className={styles.userActions}>
-        {/* Esconde busca e notificações se simplificado for true */}
         {!simplificado && (
           <>
-            <SearchBar />
+            <div onClick={handleSearch}>
+              <SearchBar placeholder="Pesquisar..." />
+            </div>
+
+            {/* Botão de Notificação (Link para configurações ou modal futuro) */}
             <button className={styles.iconButton}>
               <svg
                 width="24"
@@ -56,10 +82,12 @@ function GlobalNav({ simplificado = false }) {
           </>
         )}
 
-        {/* Avatar do Usuário (Sempre visível) */}
-        <div className={styles.avatar}>
-          <span>U</span>
-        </div>
+        {/* Avatar (Link para o Perfil) */}
+        <Link to="/profile" style={{ textDecoration: "none" }}>
+          <div className={styles.avatar}>
+            <span>U</span>
+          </div>
+        </Link>
       </div>
     </header>
   );

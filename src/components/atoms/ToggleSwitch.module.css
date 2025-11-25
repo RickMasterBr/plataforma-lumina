@@ -1,0 +1,49 @@
+.switchBase {
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    /* Formato de pílula */
+    border: 1px solid var(--color-border-default);
+    background-color: var(--color-background-primary);
+    /* Fundo escuro (neutral-900) */
+
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    /* Espaçamento interno */
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.handle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--color-text-subtle);
+    /* Cinza (neutral-400) */
+    transition: transform 0.3s ease, background-color 0.3s;
+
+    /* Começa na esquerda */
+    transform: translateX(0);
+}
+
+/* --- ESTADO: LIGADO (ON) --- */
+.on {
+    background-color: var(--color-interactive-accent);
+    /* Roxo */
+    border-color: var(--color-interactive-accent);
+}
+
+.on .handle {
+    background-color: var(--color-text-default);
+    /* Branco */
+    /* Move para a direita (44px largura total - 2px bordaEsq - 2px bordaDir - 2px padEsq - 18px handle = ~20px de deslocamento) */
+    transform: translateX(20px);
+}
+
+/* Hover e Focus para acessibilidade */
+.switchBase:focus {
+    box-shadow: 0 0 0 2px var(--color-interactive-accent-hover);
+}

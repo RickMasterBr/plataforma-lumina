@@ -1,5 +1,5 @@
 import React from 'react';
-import GlobalNav from '../components/organisms/GlobalNav';
+import { useParams } from 'react-router-dom';
 import Postagem from '../components/organisms/Postagem';
 import CompositorComentario from '../components/organisms/CompositorComentario';
 import Comentario from '../components/organisms/Comentario';
@@ -30,7 +30,9 @@ const dadosComentarios = [
 
 
 function Tela09_DetalhePostagem() {
-  
+  const { id } = useParams();
+  console.log("Visualizando postagem ID:", id);
+
   // Dados da postagem original (que o usuário clicou)
   const postagemOriginal = {
     autor: "João Silva",
@@ -42,15 +44,14 @@ function Tela09_DetalhePostagem() {
 
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-      
+
       <div className={styles.detailContainer}>
-        
+
         {/* Coluna Focada (Centralizada) */}
         <div className={styles.focoColumn}>
-            
+
           {/* 1. Postagem Principal no Topo */}
-          <Postagem 
+          <Postagem
             autor={postagemOriginal.autor}
             tempo={postagemOriginal.tempo}
             conteudo={postagemOriginal.conteudo}
@@ -59,23 +60,23 @@ function Tela09_DetalhePostagem() {
           />
 
           {/* 2. Compositor de Comentário */}
-          <CompositorComentario 
-            avatarChar="N" 
+          <CompositorComentario
+            avatarChar="N"
             placeholder="Responder à postagem..."
           />
 
           {/* 3. Lista de Comentários Aninhados */}
-          <h3 className="heading-4" style={{marginTop: '16px'}}>Comentários ({postagemOriginal.comentarios})</h3>
-          
+          <h3 className="heading-4" style={{ marginTop: '16px' }}>Comentários ({postagemOriginal.comentarios})</h3>
+
           <div className={styles.commentsList}>
             {dadosComentarios.map((comentario, index) => (
-                <Comentario 
-                    key={index} 
-                    autor={comentario.autor}
-                    tempo={comentario.tempo}
-                    conteudo={comentario.conteudo}
-                    respostas={comentario.respostas}
-                />
+              <Comentario
+                key={index}
+                autor={comentario.autor}
+                tempo={comentario.tempo}
+                conteudo={comentario.conteudo}
+                respostas={comentario.respostas}
+              />
             ))}
           </div>
 

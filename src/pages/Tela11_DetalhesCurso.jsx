@@ -1,13 +1,14 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import Button from "../components/atoms/Button";
 import styles from "./Tela11_DetalhesCurso.module.css";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Tela11_DetalhesCurso() {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.detailsContainer}>
         {/* --- COLUNA ESQUERDA: CONTEÚDO PRINCIPAL --- */}
         <main className={styles.mainContent}>
@@ -90,7 +91,11 @@ function Tela11_DetalhesCurso() {
               >
                 Acesso total vitalício • Certificado de conclusão
               </p>
-              <Button tipo="primario" fullWidth>
+              <Button
+                tipo="primario"
+                fullWidth
+                onClick={() => navigate(`/course/${id}/confirm`)}
+              >
                 Inscreva-se Agora
               </Button>
             </div>

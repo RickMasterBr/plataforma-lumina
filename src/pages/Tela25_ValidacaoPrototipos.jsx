@@ -1,14 +1,10 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import CardValidacao from "../components/organisms/CardValidacao";
 import styles from "./Tela25_ValidacaoPrototipos.module.css";
 
 function Tela25_ValidacaoPrototipos() {
   return (
     <div className={styles.pageContainer}>
-      {/* GlobalNav Simplificado (Foco na tarefa) */}
-      <GlobalNav simplificado={true} />
-
       <div className={styles.validationContainer}>
         <header className={styles.header}>
           <h1 className="heading-2">Projetos Pendentes de Validação</h1>

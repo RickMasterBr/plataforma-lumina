@@ -1,8 +1,8 @@
-
-import React, { useState } from 'react';
-import Button from '../components/atoms/Button';
-import Tag from '../components/atoms/Tag';
-import styles from './Tela04_Interesses.module.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importar Router
+import Button from "../components/atoms/Button";
+import Tag from "../components/atoms/Tag";
+import styles from "./Tela04_Interesses.module.css";
 
 const TOPICOS = [
   "Marketing Digital",
@@ -13,20 +13,17 @@ const TOPICOS = [
   "Inovação",
   "Branding",
   "Copywriting",
-  "Gestão de Projetos"
+  "Gestão de Projetos",
 ];
 
 function Tela04_Interesses() {
-  // Estado para guardar os interesses selecionados (Array)
+  const navigate = useNavigate();
   const [selectedInterests, setSelectedInterests] = useState([]);
 
-  // Função para adicionar/remover interesse ao clicar
   const toggleInterest = (topic) => {
     if (selectedInterests.includes(topic)) {
-      // Se já existe, remove (filtra)
-      setSelectedInterests(selectedInterests.filter(item => item !== topic));
+      setSelectedInterests(selectedInterests.filter((item) => item !== topic));
     } else {
-      // Se não existe, adiciona
       setSelectedInterests([...selectedInterests, topic]);
     }
   };
@@ -34,16 +31,16 @@ function Tela04_Interesses() {
   return (
     <div className={styles.screenContainer}>
       <div className={styles.onboardingCard}>
-        
         <div className={styles.header}>
           <h1 className={styles.title}>Personalize sua jornada</h1>
-          <p className={styles.subtitle}>Selecione alguns tópicos de interesse:</p>
+          <p className={styles.subtitle}>
+            Selecione alguns tópicos de interesse:
+          </p>
         </div>
 
-        {/* Nuvem de Tags */}
         <div className={styles.tagCloud}>
           {TOPICOS.map((topic) => (
-            <Tag 
+            <Tag
               key={topic}
               label={topic}
               selected={selectedInterests.includes(topic)}
@@ -52,12 +49,21 @@ function Tela04_Interesses() {
           ))}
         </div>
 
-        {/* Botões de Ação (Voltar / Concluir) */}
         <div className={styles.footerActions}>
-          <Button tipo="secundario" fullWidth>Voltar</Button>
-          <Button tipo="primario" fullWidth>Concluir</Button>
-        </div>
+          {/* Voltar para Metas */}
+          <Button
+            tipo="secundario"
+            fullWidth
+            onClick={() => navigate("/onboarding")}
+          >
+            Voltar
+          </Button>
 
+          {/* Concluir -> Ir para Dashboard (com Tour) */}
+          <Button tipo="primario" fullWidth onClick={() => navigate("/dashboard")}>
+            Concluir
+          </Button>
+        </div>
       </div>
     </div>
   );

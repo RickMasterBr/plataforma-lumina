@@ -1,19 +1,27 @@
 import React, { useState } from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import ProgressBar from "../components/molecules/ProgressBar";
 import styles from "./Tela12_PlayerCurso.module.css";
+import { useParams, useNavigate } from "react-router-dom";
 
 function Tela12_PlayerCurso() {
   // Estado simples para controlar a aba ativa abaixo do vídeo
   const [activeTab, setActiveTab] = useState("qa"); // 'qa', 'notas', 'recursos'
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.playerGrid}>
         {/* --- COLUNA ESQUERDA: CONTEÚDO PRINCIPAL (Vídeo + Abas) --- */}
         <main className={styles.mainContent}>
+          {/* Botão de Voltar */}
+          <button
+            onClick={() => navigate(`/course/${id}`)}
+            style={{ marginBottom: '16px', background: 'none', border: 'none', color: 'var(--color-primary)', cursor: 'pointer' }}
+          >
+            ← Voltar para Detalhes
+          </button>
+
           {/* Player de Vídeo (Placeholder) */}
           <div className={styles.videoPlayer}>
             <div className={styles.playButton}>▶</div>
@@ -39,25 +47,22 @@ function Tela12_PlayerCurso() {
           <div className={styles.contextPanel}>
             <div className={styles.tabsHeader}>
               <button
-                className={`${styles.tab} ${
-                  activeTab === "qa" ? styles.active : ""
-                }`}
+                className={`${styles.tab} ${activeTab === "qa" ? styles.active : ""
+                  }`}
                 onClick={() => setActiveTab("qa")}
               >
                 Perguntas e Respostas
               </button>
               <button
-                className={`${styles.tab} ${
-                  activeTab === "notas" ? styles.active : ""
-                }`}
+                className={`${styles.tab} ${activeTab === "notas" ? styles.active : ""
+                  }`}
                 onClick={() => setActiveTab("notas")}
               >
                 Anotações
               </button>
               <button
-                className={`${styles.tab} ${
-                  activeTab === "recursos" ? styles.active : ""
-                }`}
+                className={`${styles.tab} ${activeTab === "recursos" ? styles.active : ""
+                  }`}
                 onClick={() => setActiveTab("recursos")}
               >
                 Recursos

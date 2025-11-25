@@ -1,5 +1,4 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import Widget from "../components/molecules/Widget";
 import ChartBar from "../components/atoms/ChartBar";
 import ChartPie from "../components/atoms/ChartPie";
@@ -9,8 +8,6 @@ import styles from "./Tela22_MeuProgresso.module.css";
 function Tela22_MeuProgresso() {
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.progressContainer}>
         {/* Título da Página */}
         <h2 className="heading-2">Meu Progresso e Analytics</h2>

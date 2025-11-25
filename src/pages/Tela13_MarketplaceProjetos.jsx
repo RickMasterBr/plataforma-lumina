@@ -1,8 +1,9 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import SearchBar from "../components/molecules/SearchBar";
 import CardProjeto from "../components/organisms/CardProjeto";
+import Button from "../components/atoms/Button";
 import styles from "./Tela13_MarketplaceProjetos.module.css";
+import { useNavigate } from "react-router-dom";
 
 // Dados Mockados
 const projetos = [
@@ -39,10 +40,9 @@ const projetos = [
 ];
 
 function Tela13_MarketplaceProjetos() {
+  const navigate = useNavigate();
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.marketplaceContainer}>
         {/* --- COLUNA ESQUERDA: FILTROS --- */}
         <aside className={styles.filterColumn}>
@@ -109,15 +109,26 @@ function Tela13_MarketplaceProjetos() {
           </div>
 
           {/* Grade de Cards de Projeto */}
+          {/* Botão de Criar Projeto no topo da lista */}
+          <div style={{ marginBottom: "24px", textAlign: "right" }}>
+            <Button onClick={() => navigate("/projects/create")}>
+              + Novo Projeto
+            </Button>
+          </div>
+
           <div className={styles.projectsGrid}>
             {projetos.map((projeto) => (
-              <CardProjeto
+              <div
                 key={projeto.id}
-                titulo={projeto.titulo}
-                resumo={projeto.resumo}
-                habilidades={projeto.habilidades}
-                equipe={projeto.equipe}
-              />
+                onClick={() => navigate(`/project/${projeto.id}`)}
+              >
+                <CardProjeto
+                  titulo={projeto.titulo}
+                  resumo={projeto.resumo}
+                  habilidades={projeto.habilidades}
+                  equipe={projeto.equipe}
+                />
+              </div>
             ))}
           </div>
         </main>

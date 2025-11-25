@@ -1,60 +1,71 @@
 import React from "react";
+import { useNavigate, Link } from "react-router-dom"; // Importar Hooks
 import Button from "../components/atoms/Button";
 import FormGroup from "../components/molecules/FormGroup";
 import styles from "./Tela01_Login.module.css";
 
 function Tela01_Login() {
-    return (
-    // O container da tela inteira (fundo escuro)
+  const navigate = useNavigate(); // Hook de navegação
+
+  const handleLogin = () => {
+    // Simulação de login
+    console.log("Login efetuado!");
+    navigate("/dashboard"); // Redireciona para o Dashboard
+  };
+
+  return (
     <div className={styles.loginScreen}>
+      <div className={styles.loginCard}>
+        <h2 className={styles.logo}>Lúmina</h2>
+        <h1 className={styles.title}>Acesse sua conta</h1>
 
-        {/* O card centralizado  */}
-        <div className={styles.loginCard}>
+        <Button tipo="secundario" fullWidth>
+          Continuar com Google
+        </Button>
+        <Button tipo="secundario" fullWidth>
+          Continuar com LinkedIn
+        </Button>
 
-            {/* Logo (Placeholder) */}
-            <h2 className={styles.logo}>Lúmina</h2>
+        <span className={styles.divisor}>ou</span>
 
-            {/* Título */}
-            <h1 className={styles.title}>Acesse sua conta</h1>
+        <FormGroup
+          label="Email"
+          type="email"
+          placeholder="Digite seu email..."
+          fullWidth
+        />
+        <FormGroup
+          label="Senha"
+          type="password"
+          placeholder="Digite sua senha..."
+          fullWidth
+        />
 
-            {/* Botões Sociais */}
-            <Button tipo="secundario" fullWidth>Continuar com Google</Button>
-            <Button tipo="secundario" fullWidth>Continuar com LinkedIn</Button>
+        {/* Link usando React Router */}
+        <Link to="/recover-password" className={styles.forgotPassword}>
+          Esqueci a senha
+        </Link>
 
-            {/* Divisor "ou" [cite: 1760-1765] */}
-            <span className={styles.divisor}>ou</span>
+        {/* Botão com ação de navegação */}
+        <Button tipo="primario" fullWidth onClick={handleLogin}>
+          Entrar
+        </Button>
 
-            {/* Formulário de Email e Senha */}
-            <FormGroup
-                label="Email"
-                type="email"
-                placeholder="Digite seu email..."
-                fullWidth
-            />
-            <FormGroup
-                label="Senha"
-                type="password"
-                placeholder="Digite sua senha..."
-                fullWidth
-            />
-
-            {/* Link "Esqueci a senha" [cite: 1778-1783] */}
-            <a href="#" className={styles.forgotPassword}>
-                Esqueci a senha
-            </a>
-
-            {/* Botão Principal de Login [cite: 1784-1789] */}
-            <Button tipo="primario" fullWidth>Entrar</Button>
-
-            {/* Link de Cadastro [cite: 1790-1801] */}
-            <div className={styles.signupLink}>
-                <span>Não tem uma conta?</span>
-                <a href="#">Cadastre-se</a>
-
-            </div>
+        <div className={styles.signupLink}>
+          <span>Não tem uma conta?</span>
+          {/* Link para Cadastro */}
+          <Link to="/register">Cadastre-se</Link>
         </div>
+
+        {/* Link Secreto para Admin (Para facilitar testes) */}
+        <div style={{ marginTop: "24px", textAlign: "center" }}>
+          <Link to="/admin" style={{ fontSize: "12px", color: "#666" }}>
+            Acesso Admin
+          </Link>
+        </div>
+      </div>
     </div>
-    );
+  );
 }
 
 export default Tela01_Login;

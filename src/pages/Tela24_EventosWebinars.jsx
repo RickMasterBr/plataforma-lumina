@@ -1,5 +1,4 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import Button from "../components/atoms/Button";
 import CardEvento from "../components/organisms/CardEvento";
 import styles from "./Tela24_EventosWebinars.module.css";
@@ -35,8 +34,6 @@ const eventos = [
 function Tela24_EventosWebinars() {
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.eventsContainer}>
         {/* Cabeçalho e Filtros */}
         <header className={styles.header}>

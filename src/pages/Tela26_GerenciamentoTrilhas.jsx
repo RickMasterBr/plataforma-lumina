@@ -3,8 +3,10 @@ import Button from '../components/atoms/Button';
 import FormGroup from '../components/molecules/FormGroup';
 import DragDropList from '../components/organisms/DragDropList';
 import styles from './Tela26_GerenciamentoTrilhas.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function Tela26_GerenciamentoTrilhas() {
+  const navigate = useNavigate();
   // Dados simulados para a lista arrastável
   const modulosIniciais = [
     "Módulo 1: Introdução ao Marketing",
@@ -14,66 +16,49 @@ function Tela26_GerenciamentoTrilhas() {
   ];
 
   return (
-    <div className={styles.adminContainer}>
-      
-      {/* --- SIDEBAR (Trilhas Ativo) --- */}
-      <aside className={styles.sidebar}>
-        <h2 className={styles.logo}>LÚMINA ADMIN</h2>
-        <nav className={styles.nav}>
-          <button className={styles.navItem}>Dashboard</button>
-          <button className={styles.navItem}>Usuários</button>
-          <button className={`${styles.navItem} ${styles.active}`}>Trilhas</button>
-          <button className={styles.navItem}>Projetos</button>
-          <button className={styles.navItem}>Timeline (Moderação)</button>
-          <button className={styles.navItem}>Relatórios</button>
-        </nav>
-      </aside>
+    <div className={styles.contentArea}>
+      <header className={styles.header}>
+        <h1 className="heading-2">Gerenciamento de Trilhas</h1>
+      </header>
 
-      {/* --- CONTEÚDO PRINCIPAL --- */}
-      <main className={styles.contentArea}>
-        <header className={styles.header}>
-          <h1 className="heading-2">Gerenciamento de Trilhas</h1>
-        </header>
+      {/* Formulário de Trilha */}
+      <div className={styles.formCard}>
 
-        {/* Formulário de Trilha */}
-        <div className={styles.formCard}>
-            
-            {/* Campos Básicos */}
-            <FormGroup 
-                label="Título da Trilha" 
-                placeholder="Ex: Marketing Digital Completo"
-                fullWidth
-            />
-            
-            <FormGroup 
-                label="Instrutor Responsável" 
-                placeholder="Selecione o instrutor..."
-                fullWidth
-            />
+        {/* Campos Básicos */}
+        <FormGroup
+          label="Título da Trilha"
+          placeholder="Ex: Marketing Digital Completo"
+          fullWidth
+        />
 
-            {/* Simulação de Editor WYSIWYG */}
-            <FormGroup 
-                label="Descrição Completa" 
-                placeholder="Descreva o conteúdo da trilha..."
-                fullWidth
-                style={{ height: '200px' }} // Ajuste de altura no CSS ou inline se o componente suportar
-            />
+        <FormGroup
+          label="Instrutor Responsável"
+          placeholder="Selecione o instrutor..."
+          fullWidth
+        />
 
-            {/* Área de Organização de Módulos */}
-            <div className={styles.modulesSection}>
-                <h3 className="heading-5" style={{marginBottom: '16px'}}>Módulos e Aulas</h3>
-                <DragDropList items={modulosIniciais} />
-            </div>
+        {/* Simulação de Editor WYSIWYG */}
+        <FormGroup
+          label="Descrição Completa"
+          placeholder="Descreva o conteúdo da trilha..."
+          fullWidth
+          style={{ height: '200px' }} // Ajuste de altura no CSS ou inline se o componente suportar
+        />
 
-            {/* Ações */}
-            <div className={styles.formActions}>
-                <Button tipo="secundario">Cancelar</Button>
-                <Button tipo="primario">Salvar Trilha</Button>
-            </div>
-
+        {/* Área de Organização de Módulos */}
+        <div className={styles.modulesSection}>
+          <h3 className="heading-5" style={{ marginBottom: '16px' }}>Módulos e Aulas</h3>
+          <DragDropList items={modulosIniciais} />
         </div>
 
-      </main>
+        {/* Ações */}
+        <div className={styles.formActions}>
+          <Button tipo="secundario" onClick={() => navigate('/admin')}>Cancelar</Button>
+          <Button tipo="primario" onClick={() => navigate('/admin')}>Salvar Trilha</Button>
+        </div>
+
+      </div>
+
     </div>
   );
 }

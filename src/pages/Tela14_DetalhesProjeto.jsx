@@ -1,18 +1,27 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import Button from "../components/atoms/Button";
 import Tag from "../components/atoms/Tag"; // Reutilizando o átomo Tag
 import MiniPerfil from "../components/organisms/MiniPerfil"; // O novo componente
 import styles from "./Tela14_DetalhesProjeto.module.css";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Tela14_DetalhesProjeto() {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.projectContainer}>
         {/* --- COLUNA ESQUERDA: CONTEÚDO PRINCIPAL --- */}
         <main className={styles.mainContent}>
+          {/* Botão de Voltar */}
+          <button
+            onClick={() => navigate('/projects')}
+            style={{ marginBottom: '16px', background: 'none', border: 'none', color: 'var(--color-primary)', cursor: 'pointer' }}
+          >
+            ← Voltar para Projetos
+          </button>
+
           {/* Cabeçalho do Projeto */}
           <header className={styles.header}>
             <div className={styles.headerMeta}>
@@ -96,7 +105,11 @@ function Tela14_DetalhesProjeto() {
               </div>
             </div>
 
-            <Button tipo="primario" fullWidth>
+            <Button
+              tipo="primario"
+              fullWidth
+              onClick={() => navigate(`/project/${id}/apply`)}
+            >
               Aplicar para Participar
             </Button>
             <div style={{ height: "12px" }}></div>

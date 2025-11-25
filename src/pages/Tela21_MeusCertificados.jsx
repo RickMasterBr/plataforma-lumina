@@ -1,13 +1,10 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import CardCertificado from "../components/organisms/CardCertificado";
 import styles from "./Tela21_MeusCertificados.module.css";
 
 function Tela21_MeusCertificados() {
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.galleryContainer}>
         {/* Título da Página */}
         <h2 className="heading-2" style={{ marginBottom: "24px" }}>

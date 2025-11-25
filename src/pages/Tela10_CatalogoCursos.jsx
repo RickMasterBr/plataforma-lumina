@@ -1,8 +1,8 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import SearchBar from "../components/molecules/SearchBar"; // Reutilizando
 import CardCurso from "../components/organisms/CardCurso";
 import styles from "./Tela10_CatalogoCursos.module.css";
+import { useNavigate } from "react-router-dom";
 
 // Dados Mockados para teste
 const cursos = [
@@ -45,10 +45,9 @@ const cursos = [
 ];
 
 function Tela10_CatalogoCursos() {
+  const navigate = useNavigate();
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.catalogContainer}>
         {/* --- COLUNA ESQUERDA: FILTROS --- */}
         <aside className={styles.filterColumn}>
@@ -94,20 +93,25 @@ function Tela10_CatalogoCursos() {
               className="body-small"
               style={{ color: "var(--color-text-subtle)" }}
             >
-              Showing {cursos.length} courses
+              Mostrando {cursos.length} cursos
             </span>
           </div>
 
           {/* Grade de Cards */}
           <div className={styles.coursesGrid}>
             {cursos.map((curso) => (
-              <CardCurso
+              // Wrapper para clique
+              <div
                 key={curso.id}
-                titulo={curso.titulo}
-                instrutor={curso.instrutor}
-                progresso={curso.progresso}
-                mostrarProgresso={false} // No catálogo geralmente não mostramos progresso
-              />
+                onClick={() => navigate(`/course/${curso.id}`)}
+              >
+                <CardCurso
+                  titulo={curso.titulo}
+                  instrutor={curso.instrutor}
+                  progresso={curso.progresso}
+                  mostrarProgresso={false}
+                />
+              </div>
             ))}
           </div>
         </main>

@@ -1,5 +1,4 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import SearchBar from "../components/molecules/SearchBar";
 import Tag from "../components/atoms/Tag";
 import CardMentor from "../components/organisms/CardMentor";
@@ -40,8 +39,6 @@ const mentores = [
 function Tela23_ComunidadeMentoria() {
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.catalogContainer}>
         {/* --- COLUNA ESQUERDA: FILTROS --- */}
         <aside className={styles.filterColumn}>

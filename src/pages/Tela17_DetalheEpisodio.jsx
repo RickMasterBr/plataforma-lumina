@@ -1,16 +1,24 @@
 import React from "react";
-import GlobalNav from "../components/organisms/GlobalNav";
 import PlayerAudio from "../components/organisms/PlayerAudio";
 import CardCurso from "../components/organisms/CardCurso"; // Da Etapa 11
 import CardProjeto from "../components/organisms/CardProjeto"; // Da Etapa 23
 import styles from "./Tela17_DetalheEpisodio.module.css";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Tela17_DetalheEpisodio() {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
   return (
     <div className={styles.pageContainer}>
-      <GlobalNav />
-
       <div className={styles.contentContainer}>
+        <button
+          onClick={() => navigate('/podcast')}
+          style={{ background: 'none', border: 'none', color: 'var(--color-primary)', cursor: 'pointer', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}
+        >
+          ← Voltar para Podcasts
+        </button>
+
         {/* 1. Player de Áudio em Destaque [cite: 3532] */}
         <section className={styles.playerSection}>
           <PlayerAudio />
@@ -18,7 +26,7 @@ function Tela17_DetalheEpisodio() {
 
         {/* 2. Informações do Episódio [cite: 3548] */}
         <main className={styles.mainContent}>
-          <h1 className="heading-2">O Futuro do Marketing Digital com IA</h1>
+          <h1 className="heading-2">O Futuro do Marketing Digital com IA (Episódio {id})</h1>
 
           <div className={styles.notesSection}>
             <h3 className="heading-4">Notas do Programa</h3>
