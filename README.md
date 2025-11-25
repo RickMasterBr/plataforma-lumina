@@ -1,16 +1,39 @@
-# React + Vite
+# Lumina Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a comprehensive learning and project marketplace platform built with React and Vite.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started with the Lumina Platform, you'll need to have Node.js and npm installed.
 
-## React Compiler
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/lumina-platform.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd lumina-platform
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Running the Project
 
-## Expanding the ESLint configuration
+To run the project in development mode, use the following command:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run dev
+```
+
+This will start the development server and you can view the application in your browser at `http://localhost:5173`.
+
+## Available Scripts
+
+In the project directory, you can run the following commands:
+
+- `npm run dev`: Runs the app in the development mode.
+- `npm run build`: Builds the app for production to the `dist` folder.
+- `npm run lint`: Lints the code using ESLint.
+- `npm run preview`: Serves the production build locally for preview.
